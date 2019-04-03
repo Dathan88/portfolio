@@ -40,12 +40,14 @@ template {
   display: none;
 }
 a {
+  color: dodgerblue;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
 }
 a:active,
 a:hover {
   outline-width: 0;
+  color: green;
 }
 abbr[title] {
   border-bottom: none;
@@ -61,6 +63,7 @@ dfn {
   font-style: italic;
 }
 h1 {
+  text-align: center;
   font-size: 2em;
   margin: 0.67em 0;
 }
@@ -185,7 +188,8 @@ textarea {
   font: inherit;
 }
 html {
-  font: 112.5%/1.45em georgia, serif;
+  font: 10px/2rem georgia, serif;
+  /* font: 112.5%/1.45em georgia, serif; */
   box-sizing: border-box;
   overflow-y: scroll;
 }
@@ -204,6 +208,7 @@ body {
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
+  font-size: 1.75rem;
   -moz-font-feature-settings: "kern", "liga", "clig", "calt";
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";

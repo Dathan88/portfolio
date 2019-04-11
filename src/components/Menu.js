@@ -5,8 +5,8 @@ const Menu = (props) => (
   <nav className={"menu " + props.className}>
       <div className={"menu-branding " + props.className}>
         <div className="portriat" />
-        <MenuList className={props.className}/>
       </div>
+        <MenuList className={props.className}/>
     </nav>
 )
 

@@ -1,10 +1,32 @@
 $primary-color: #444;
 $secondary-color: #eece1a;
 $show-home-image: true;
-$home-image: url();
+$home-image: url('../images/computer-keyboard-conceptual-connection-1714205.jpg');
+$background-opacity: 0.8;
 
 @mixin easeOut {
   transition: all 0.5s ease-out;
+}
+
+@mixin background {
+  @if $show-home-image { 
+    @at-root body {
+      background: $home-image;
+      background-attachment: fixed;
+      background-size: cover;
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background: rgba($primary-color, $background-opacity);
+      }
+    }
+  }
 }
 
 html {
@@ -632,13 +654,18 @@ pre tt:after {
     font-size: 100%;
   }
 }
-// Most custom properties
+
+// Custom properties
 * {
   box-sizing: border-box;
 }
 body {
+  @include background;
   background: $primary-color;
   color: #fff;
+  height: 100%;
+  margin: 0;
+  line-height: 1.5;
 }
 h1,
 h2,
@@ -668,6 +695,7 @@ header {
 .text-secondary {
   color: $secondary-color;
 }
+
 main {
   padding: 4rem;
   height: 100%;
@@ -733,7 +761,103 @@ main {
     }
   }
 }
+
+//Menu overlay
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.9;
+  visibility: hidden;
+
+  &.show {
+    visibility: visible;
+  }
+
+  &-branding,
+  &-nav {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  &-nav {
+    margin: 0;
+    padding: 0;
+    background: darken($primary-color, 5);
+    list-style: none;
+    transform: translate3d(0, -100%, 0);
+    @include easeOut;
+
+    &.show {
+      // Slide in from top
+      transform: translate3d(0, 0, 0)
+    }
+  }
+
+  // Branding Side
+  &-branding {
+    background: $primary-color;
+    transform: translate3d(0, 100%, 0);
+    @include easeOut;
+    
+    &.show {
+      // Slide in from bottom
+      transform: translate3d(0, 0, 0);
+    }
+
+    .portriat {
+      width: 250px;
+      height: 250px;
+      background: url('../images/Dathan1-portriat.jpg');
+      border-radius: 50%;
+      border: solid 3px $secondary-color;
+    }
+  }
+
+  .nav-item {
+    transform: translate3d(600px, 0, 0);
+    @include easeOut;
+
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .nav-link {
+    display: inline-block;
+    position: relative;
+    font-size: 30px;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    color: #fff;
+    text-decoration: none;
+    @include easeOut;
+
+    &.current {
+      color: $secondary-color;
+    }
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}
+
+// Delay each nav item by 0.1s
+@for $x from 1 through 4 {
+  .nav-item:nth-child(#{$x}) {
+    transition-delay: $x * 0.1s;
+  }
+}
+
+//remove scrollbar
 ::-webkit-scrollbar {
-  width: 0px; /* remove scrollbar space */
-  background: transparent; /* optional: make scrollbar invisible */
+  width: 0px;
+  background: transparent;
 }

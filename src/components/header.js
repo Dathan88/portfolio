@@ -16,15 +16,14 @@ const Header = ({ siteTitle }) => {
       setMenuBtnClass('menu-btn show')
       setMenuItemsClass('close')
     }
-    // console.log(menuBtnClass);
   }
 
   return (
   <header>
-    <div className={menuBtnClass}>
-      <div className={'btn-line' }  onClick={toggleMenu}/>
-      <div className={'btn-line' }  onClick={toggleMenu}/>
-      <div className={'btn-line' }  onClick={toggleMenu}/>
+    <div className={menuBtnClass} onClick={toggleMenu}>
+      <div className={'btn-line' }/>
+      <div className={'btn-line' }/>
+      <div className={'btn-line' }/>
     </div>
 
     <Menu className={menuItemsClass} />

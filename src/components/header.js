@@ -1,35 +1,35 @@
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React from "react"
+import React, {useState} from "react"
+import Menu from "./Menu"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+
+const Header = ({ siteTitle }) => {
+  const [menuBtnClass, setMenuBtnClass] = useState('menu-btn show')
+  const [menuItemsClass, setMenuItemsClass ] = useState('close')
+
+  function toggleMenu() {
+    console.log('clicked');
+    if(menuItemsClass === 'close') {
+      setMenuBtnClass('menu-btn close')
+      setMenuItemsClass('show')
+    } else {
+      setMenuBtnClass('menu-btn show')
+      setMenuItemsClass('close')
+    }
+    // console.log(menuBtnClass);
+  }
+
+  return (
+  <header>
+    <div className={menuBtnClass}>
+      <div className={'btn-line' }  onClick={toggleMenu}/>
+      <div className={'btn-line' }  onClick={toggleMenu}/>
+      <div className={'btn-line' }  onClick={toggleMenu}/>
     </div>
+
+    <Menu className={menuItemsClass} />
   </header>
-)
+)}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,

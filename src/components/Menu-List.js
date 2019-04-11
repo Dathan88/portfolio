@@ -15,7 +15,7 @@ const MenuList = (props) => {
       {myPages.map((page, index) => {
         return (
           <li className={"nav-item " + props.className} key={index}>
-            <Link to={myLinks[index]} activeClassName="nav-link">
+            <Link to={myLinks[index]} activeClassName="current" className="nav-link">
               {page}
             </Link>
           </li>

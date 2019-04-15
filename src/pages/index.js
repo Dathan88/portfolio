@@ -1,4 +1,5 @@
 import React from "react"
+import { Helmet } from "react-helmet"
 import { Link } from "gatsby"
 import {  IconContext } from "react-icons";
 import {  FaGithub, FaLinkedin } from "react-icons/fa";
@@ -11,6 +12,7 @@ const HomePage = () => (
   <Layout>
     <SEO
       title="Home"
+      meta={[{'viewport': 'width=device-width, initial-scale=1' }]}
       keywords={[`gatsby`, `application`, `react`, `personal`, `portfolio`]}
     />
     <main id="home">

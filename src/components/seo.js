@@ -2,6 +2,8 @@ import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import favicon16 from '../images/favicon-16x16.png';
+import favicon32 from '../images/favicon-32x32.png';
 
 function SEO({ description, lang, meta, keywords, title }) {
   const { site } = useStaticQuery(
@@ -70,15 +72,29 @@ function SEO({ description, lang, meta, keywords, title }) {
             : []
         )
         .concat(meta)}
+      link={[
+        {
+          rel: "icon",
+          type: "image/png",
+          sizes: "16x16",
+          href: `${favicon16}`,
+        },
+        {
+          rel: "icon",
+          type: "image/png",
+          sizes: "32x32",
+          href: `${favicon32}`,
+        }
+      ]}
     />
   )
 }
 
 SEO.defaultProps = {
   lang: `en`,
-  meta: [],
-  keywords: [],
-  description: ``,
+  meta: [{ viewport: "width=device-width, initial-scale=1" }],
+  keywords: [`gatsby`, `application`, `react`, `personal`, `portfolio`],
+  description: `Dathan Spencer - Front-End Web Developer and Graphic Designer`,
 }
 
 SEO.propTypes = {

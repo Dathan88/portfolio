@@ -697,13 +697,13 @@ pre tt:after {
 	box-sizing: border-box;
 }
 html {
-  // font: 10px/2rem georgia, serif;
-  height: 100vh;
+	// font: 10px/2rem georgia, serif;
+	height: 100vh;
 	@include fluid-type(font-size, 320px, 1366px, 10px, 15px);
 }
 body {
-  @include background;
-  @include fluid-type(font-size, 320px, 1366px, 10px, 15px);
+	@include background;
+	@include fluid-type(font-size, 320px, 1366px, 10px, 15px);
 	background: $primary-color;
 	color: set-text-color($primary-color);
 	height: 100%;
@@ -741,15 +741,15 @@ header {
 
 main {
 	padding: 3rem;
-  height: 100%;
-  // min-height: calc(100vh - 60px);
+	height: 100%;
+	// min-height: calc(100vh - 60px);
 
 	.icons {
 		margin-top: 1rem;
 
 		a {
 			padding: 0.4rem;
-      @include easeOut();
+			@include easeOut();
 
 			&:hover {
 				color: $secondary-color;
@@ -977,12 +977,12 @@ main {
 		margin-top: 10vh;
 		text-align: center;
 		font-size: 4rem;
-  }
-  
-  main.lg-heading {
-    margin-top: 1rem;
-    font-size: 5rem;
-  }
+	}
+
+	main.lg-heading {
+		margin-top: 1rem;
+		font-size: 5rem;
+	}
 }
 
 //remove scrollbar

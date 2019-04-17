@@ -3,6 +3,7 @@ $secondary-color: #eece1a;
 $show-home-image: true;
 $home-image: url("../images/computer-keyboard-conceptual-connection-1714205.jpg");
 $background-opacity: 0.8;
+// $pg-color: (home: $home-image,)
 
 // Function for fluid elements
 @mixin fluid-type($properties, $min-vw, $max-vw, $min-value, $max-value) {
@@ -699,16 +700,17 @@ pre tt:after {
 html {
 	// font: 10px/2rem georgia, serif;
 	height: 100vh;
-	@include fluid-type(font-size, 320px, 1366px, 10px, 15px);
+	@include fluid-type(font-size, 320px, 1366px, 10px, 14px);
 }
 body {
+	// @include fluid-type(font-size, 320px, 1366px, 14px, 16px);
 	@include background;
-	@include fluid-type(font-size, 320px, 1366px, 10px, 15px);
+	font-size: calc(1rem + 0.3vmin);
 	background: $primary-color;
 	color: set-text-color($primary-color);
 	height: 100%;
 	margin: 0;
-	line-height: 1.5rem;
+	line-height: 1.5;
 }
 h1,
 h2,
@@ -740,16 +742,15 @@ header {
 }
 
 main {
-	padding: 3rem;
+	padding: 0 2rem;
 	height: 100%;
-	// min-height: calc(100vh - 60px);
 
 	.icons {
 		margin-top: 1rem;
 
 		a {
 			padding: 0.4rem;
-			@include easeOut();
+			@include easeOut;
 
 			&:hover {
 				color: $secondary-color;
@@ -761,6 +762,21 @@ main {
 		overflow: hidden;
 		h1 {
 			margin-top: 20vh;
+		}
+	}
+	&#about {
+		h1 {
+			text-align: left;
+		}
+		@at-root body & {
+			background: $primary-color;
+			content: "";
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+			// z-index: -1;
 		}
 	}
 }
@@ -803,7 +819,7 @@ main {
 	}
 }
 
-//Menu overlay
+//! Menu overlay
 .menu {
 	position: fixed;
 	top: 0;
@@ -841,7 +857,7 @@ main {
 		}
 	}
 
-	// Branding Side
+	//! Branding Side
 	&-branding {
 		background: $primary-color;
 		transform: translate3d(0, 100%, 0);
@@ -890,14 +906,71 @@ main {
 	}
 }
 
-// Delay each nav item by 0.1s
+//! Delay each nav item by 0.1s
 @for $x from 1 through 4 {
 	.nav-item:nth-child(#{$x}) {
 		transition-delay: $x * 0.1s;
 	}
 }
 
-// Media Queries
+.about-info {
+	display: grid;
+	text-align: left;
+	justify-self: center;
+	grid-gap: 30px;
+	grid-template-areas:
+		"bioimage bio bio"
+		"job1 job2 job3";
+	grid-template-columns: repeat(3, 1fr);
+
+	.bio-image.portriat {
+		justify-self: center;
+		grid-area: bioimage;
+		width: 250px;
+		height: 250px;
+		background: url("../images/Dathan1-portriat.jpg");
+		border-radius: 50%;
+		border: solid 3px $secondary-color;
+	}
+
+	.bio {
+		grid-area: bio;
+		font-size: 1.5rem;
+	}
+
+	.job-1 {
+		grid-area: job1;
+	}
+
+	.job-2 {
+		grid-area: job2;
+	}
+
+	.job-3 {
+		grid-area: job3;
+	}
+
+	.job {
+		background: lighten($primary-color, 5);
+		padding: 0.5rem;
+		border-bottom: $secondary-color 5px solid;
+	}
+}
+
+//! Might use later...
+footer {
+	position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+	height: 60px;
+	text-align: center;
+	padding: 21px;
+	background: darken($primary-color, 10);
+	color: set-text-color($primary-color);
+}
+
+//! Media Queries
 @mixin mediaSm {
 	@media screen and (max-width: 500px) {
 		@content;
@@ -905,7 +978,7 @@ main {
 }
 
 @mixin mediaMd {
-	@media screen and (max-width: 768px) {
+	@media screen and (max-width: 750px) {
 		@content;
 	}
 }
@@ -940,6 +1013,12 @@ main {
 			line-height: 1;
 			margin-bottom: 1rem;
 		}
+
+		&#about {
+			h1 {
+				text-align: center;
+			}
+		}
 	}
 
 	ul.menu-nav,
@@ -969,6 +1048,18 @@ main {
 			height: 150px;
 		}
 	}
+
+	.about-info {
+		grid-template-areas:
+		'bioimage'
+		'bio'
+		'job1'
+		'job2'
+		'job3';
+
+		grid-template-columns: 1fr;
+		margin-bottom: 6rem;
+	}
 }
 
 // Smartphones
@@ -982,6 +1073,18 @@ main {
 	main.lg-heading {
 		margin-top: 1rem;
 		font-size: 5rem;
+	}
+
+	.about-info {
+		grid-template-areas: 
+		'bioimage'
+		'bio'
+		'job1'
+		'job2'
+		'job3';
+
+		grid-template-columns: 1fr;
+		margin-bottom: 7rem;
 	}
 }
 

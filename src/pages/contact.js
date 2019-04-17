@@ -1,6 +1,5 @@
 import React from "react"
 import { Link } from "gatsby"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -9,7 +8,7 @@ const ContactPage = () => (
     <SEO title="Contact Me Page" />
     <h1>Contact Info</h1>
     <address>
-      <a href="mailto:dpspencer88@gmail.com">dpspencer88@gmail.com</a>
+      <a href="mailto:#!">Johnny5@example.net</a>
     </address>
     <p>
       Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis
@@ -23,7 +22,7 @@ const ContactPage = () => (
       ducimus deserunt reiciendis nam ipsa voluptatem repudiandae iusto.
       Voluptatum, eos?
     </p>
-    <Link to="/">Go back to the homepage</Link>
+    {/* <Link to="/">Go back to the homepage</Link> */}
   </Layout>
 )
 

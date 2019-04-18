@@ -1,32 +1,64 @@
 import React from "react"
-import { Link } from "gatsby"
-
 import Layout from "../components/layout"
+import { FaGithub, FaEye } from "react-icons/fa"
 import SEO from "../components/seo"
+import logo from "../images/ms-icon-310x310.png"
 
 const ProjectsPage = () => (
   <Layout>
-    <SEO title="Projects Page" />
-    <h1>Welcome to the projects page</h1>
-    <ol>
-      <li>
-        Pariatur qui quis qui aliquip aliquip officia nostrud Lorem nisi
-        exercitation anim cupidatat est.
-      </li>
-      <li>
-        Laborum consectetur adipisicing Lorem laborum elit aute non aute enim
-        aliqua consequat ea elit deserunt.
-      </li>
-      <li>Tempor aliquip enim fugiat dolore consequat irure elit.</li>
-      <li>Ad amet duis occaecat ut dolore excepteur excepteur sit.</li>
-      <li>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum quia ex
-        tempora necessitatibus impedit repellat doloremque mollitia, hic quam
-        placeat explicabo laboriosam aliquid molestias dolores. Quod,
-        architecto. Totam, itaque soluta.
-      </li>
-    </ol>
-    {/* <Link to="/">Go back to the homepage</Link> */}
+    <SEO title="My Projects" />
+    <main id="projects">
+      <h1 className="lg-heading">
+        My <span className="text-secondary">Work</span>
+        <h2 className="sm-heading">Check out some of my projects...</h2>
+      </h1>
+      <div className="projects">
+        <div className="item">
+          <a href="#!">
+            <img id="item1" src={logo} alt="logo" />
+          </a>
+          <a href="#!" className="btn-light">
+            <FaEye className="fas fa-eye" /> Project
+          </a>
+          <a href="#!" className="btn-dark">
+            <FaGithub className="fas fa-github" /> Project
+          </a>
+        </div>
+        <div className="item">
+          <a href="#!">
+            <img id="item2" src={logo} alt="logo" />
+          </a>
+          <a href="#!" className="btn-light">
+            <FaEye className="fas fa-eye" /> Project
+          </a>
+          <a href="#!" className="btn-dark">
+            <FaGithub className="fas fa-github" /> Project
+          </a>
+        </div>
+        <div className="item">
+          <a href="#!">
+            <img id="item3" src={logo} alt="logo" />
+          </a>
+          <a href="#!" className="btn-light">
+            <FaEye className="fas fa-eye" /> Project
+          </a>
+          <a href="#!" className="btn-dark">
+            <FaGithub className="fas fa-github" /> Project
+          </a>
+        </div>
+        <div className="item">
+          <a href="#!">
+            <img id="item4" src={logo} alt="logo" />
+          </a>
+          <a href="#!" className="btn-light">
+            <FaEye className="fas fa-eye" /> Project
+          </a>
+          <a href="#!" className="btn-dark">
+            <FaGithub className="fas fa-github" /> Project
+          </a>
+        </div>
+      </div>
+    </main>
   </Layout>
 )
 

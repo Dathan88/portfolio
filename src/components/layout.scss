@@ -742,7 +742,7 @@ header {
 }
 
 main {
-	padding: 4rem;
+	padding: 5rem 3rem;
 	height: 100%;
 
 	.icons {
@@ -771,7 +771,24 @@ main {
 		}
 
 		&-parent {
-			padding: 3.5rem;
+			padding: 0;
+			background-color: $primary-color;
+		}
+	}
+	&#projects {
+		overflow: hidden;
+		h1 {
+			text-align: left;
+		}
+
+		.sm-heading {
+			margin: 2rem 0;
+			padding: 0.2 1rem;
+			background: rgba(lighten($primary-color, 2), 0.5);
+		}
+
+		&-parent {
+			padding: 0;
 			background-color: $primary-color;
 		}
 	}
@@ -953,7 +970,50 @@ main {
 	}
 }
 
-//! Might use later...
+//! Work/Projects
+#projects {
+	.projects {
+		display: grid;
+		grid-gap: 1rem;
+		grid-template-columns: repeat(3, 1fr);
+
+		img {
+			width: 100%;
+			border: 3px black solid;
+
+			&:hover {
+				opacity: 0.5;
+				border-color: $secondary-color;
+				@include easeOut;
+			}
+		}
+	}
+}
+
+//! Button Styles
+.btn {
+	display: block;
+	padding: 0.5rem 1rem;
+	border: 0;
+	margin-bottom: 0.3rem;
+	&:hover {
+		background: $secondary-color;
+		color: set-text-color($secondary-color);
+	}
+}
+
+.btn-dark {
+	@extend .btn;
+	background: darken($primary-color, 50);
+	color: #fff;
+}
+
+.btn-light {
+	@extend .btn;
+	background: lighten($primary-color, 50);
+	color: #333;
+}
+
 footer {
 	position: fixed;
 	bottom: 0;
@@ -993,10 +1053,22 @@ footer {
 
 // Widescreens
 @include mediaXl {
+	#projects .projects {
+		grid-template-columns: repeat(4, 1fr);
+		.lg-heading {
+			text-align: left;
+		}
+	}
 }
 
 // Computer screens
 @include mediaLg {
+	#projects .projects {
+		grid-template-columns: repeat(3, 1fr);
+		.lg-heading {
+			text-align: left;
+		}
+	}
 }
 
 // Tablets - Small laptops
@@ -1011,6 +1083,11 @@ footer {
 		}
 
 		&#about {
+			h1 {
+				text-align: center;
+			}
+		}
+		&#projects {
 			h1 {
 				text-align: center;
 			}
@@ -1056,12 +1133,19 @@ footer {
 		grid-template-columns: 1fr;
 		margin-bottom: 3rem;
 	}
+
+	#projects .projects {
+		& h1.lg-heading {
+			text-align: center;
+		}
+		grid-template-columns: repeat(2, 1fr);
+	}
 }
 
 // Smartphones
 @include mediaSm {
 	main#home h1 {
-		margin-top: 10vh;
+		margin-top: 20vh;
 		text-align: center;
 		font-size: 4rem;
 	}
@@ -1080,6 +1164,10 @@ footer {
 
 		grid-template-columns: 1fr;
 		margin-bottom: 3rem;
+	}
+
+	#projects .projects {
+		grid-template-columns: 1fr;
 	}
 }
 

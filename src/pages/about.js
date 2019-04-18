@@ -22,7 +22,7 @@ const AboutPage = () => (
           </p>
         </div>
         <div className="job job-1">
-          <h3>Jakubowski and Sons</h3>
+          <h3>Jakubowski Inc.</h3>
           <h6>Front-End Developer</h6>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi fugit

@@ -54,7 +54,7 @@ $background-opacity: 0.8;
 			background-attachment: fixed;
 			background-size: cover;
 
-			&:after {
+			&::after {
 				content: "";
 				position: fixed;
 				top: 0;
@@ -742,7 +742,7 @@ header {
 }
 
 main {
-	padding: 0 2rem;
+	padding: 4rem;
 	height: 100%;
 
 	.icons {
@@ -765,18 +765,14 @@ main {
 		}
 	}
 	&#about {
+		overflow: hidden;
 		h1 {
 			text-align: left;
 		}
-		@at-root body & {
-			background: $primary-color;
-			content: "";
-			position: absolute;
-			top: 0;
-			right: 0;
-			width: 100%;
-			height: 100%;
-			// z-index: -1;
+
+		&-parent {
+			padding: 3.5rem;
+			background-color: $primary-color;
 		}
 	}
 }
@@ -960,9 +956,9 @@ main {
 //! Might use later...
 footer {
 	position: fixed;
-    bottom: 0;
-    right: 0;
-    width: 100%;
+	bottom: 0;
+	right: 0;
+	width: 100%;
 	height: 60px;
 	text-align: center;
 	padding: 21px;
@@ -1051,14 +1047,14 @@ footer {
 
 	.about-info {
 		grid-template-areas:
-		'bioimage'
-		'bio'
-		'job1'
-		'job2'
-		'job3';
+			"bioimage"
+			"bio"
+			"job1"
+			"job2"
+			"job3";
 
 		grid-template-columns: 1fr;
-		margin-bottom: 6rem;
+		margin-bottom: 3rem;
 	}
 }
 
@@ -1070,21 +1066,20 @@ footer {
 		font-size: 4rem;
 	}
 
-	main.lg-heading {
-		margin-top: 1rem;
+	main#about h1.lg-heading {
 		font-size: 5rem;
 	}
 
 	.about-info {
-		grid-template-areas: 
-		'bioimage'
-		'bio'
-		'job1'
-		'job2'
-		'job3';
+		grid-template-areas:
+			"bioimage"
+			"bio"
+			"job1"
+			"job2"
+			"job3";
 
 		grid-template-columns: 1fr;
-		margin-bottom: 7rem;
+		margin-bottom: 3rem;
 	}
 }
 

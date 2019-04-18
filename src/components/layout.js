@@ -18,12 +18,8 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <div
-          style={{
-            height: `calc(100vh - 60px)`,
-          }}
-        >
-          <main>
+        <div id='layout'>
+          <main id={children[1].props.id + `-parent`}>
             {children}
             <footer>Copyright &copy; 2019</footer>
           </main>

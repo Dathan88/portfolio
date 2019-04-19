@@ -1,28 +1,33 @@
 import React from "react"
-import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const ContactPage = () => (
   <Layout>
     <SEO title="Contact Me Page" />
-    <h1>Contact Info</h1>
-    <address>
-      <a href="mailto:#!">Johnny5@example.net</a>
-    </address>
-    <p>
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis
-      voluptas ipsa corporis nemo explicabo quod magni consequatur error
-      accusamus esse quo adipisci odit tempora voluptatum accusantium, maiores
-      cupiditate fugit aspernatur?
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia modi enim
-      ipsam, adipisci esse, odit dicta repellat cupiditate sapiente blanditiis
-      ducimus deserunt reiciendis nam ipsa voluptatem repudiandae iusto.
-      Voluptatum, eos?
-    </p>
-    {/* <Link to="/">Go back to the homepage</Link> */}
+    <main id="contact">
+      <h1 className="lg-heading">
+        Contact
+        <span className="text-secondary"> Me</span>
+      </h1>
+      <h2 className="sm-heading">
+        This is how you can reach me...
+      </h2>
+      <div className="boxes">
+        <div>
+          <span className="text-secondary">Email:</span>
+          johnny5@example.com
+        </div>
+        <div>
+          <span className="text-secondary">Phone:</span>
+          (555) 555-5555
+        </div>
+        <div>
+          <span className="text-secondary">Address:</span>
+          50 Center St, Boston NM 87101
+        </div>
+      </div>
+    </main>
   </Layout>
 )
 

@@ -1077,33 +1077,48 @@ footer {
 }
 
 @mixin mediaLg {
-	@media screen and (min-width: 769px) and (max-width: 1170px) {
+	@media screen and (max-width: 950px) {
 		@content;
 	}
 }
 
 @mixin mediaXl {
-	@media screen and (min-width: 1171px) {
+	@media screen and (min-width: 951px) {
 		@content;
 	}
 }
 
 // Widescreens
 @include mediaXl {
-	#projects .projects {
-		grid-template-columns: repeat(4, 1fr);
+	#projects {
+		.projects {
+			grid-template-columns: repeat(4, 1fr);
+		}
+
 		.lg-heading {
 			text-align: left;
+		}
+
+		body & {
+			height: 100vh;
+			background-color: $primary-color;
 		}
 	}
 }
 
 // Computer screens
 @include mediaLg {
-	#projects .projects {
-		grid-template-columns: repeat(3, 1fr);
+	#projects {
+		.projects {
+			grid-template-columns: repeat(3, 1fr);
+		}
+
 		.lg-heading {
 			text-align: left;
+		}
+
+		body & {
+			background-color: $primary-color;
 		}
 	}
 }
@@ -1161,14 +1176,15 @@ footer {
 		margin-bottom: 3rem;
 	}
 
-	#projects .projects {
-		& h1.lg-heading {
-			text-align: center;
+	#projects {
+		.projects {
+			& h1.lg-heading {
+				text-align: center;
+			}
+			grid-template-columns: repeat(2, 1fr);
 		}
-		grid-template-columns: repeat(2, 1fr);
 	}
 }
-
 // Smartphones
 @include mediaSm {
 	main#home h1 {
@@ -1192,8 +1208,14 @@ footer {
 		margin-bottom: 3rem;
 	}
 
-	#projects .projects {
-		grid-template-columns: 1fr;
+	#projects {
+		.projects {
+			grid-template-columns: 1fr;
+		}
+
+		.lg-heading {
+			text-align: center;
+		}
 	}
 }
 

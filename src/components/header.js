@@ -7,7 +7,6 @@ const Header = ({ siteTitle }) => {
   const [menuItemsClass, setMenuItemsClass ] = useState('close')
 
   function toggleMenu() {
-    console.log('clicked');
     if(menuItemsClass === 'close') {
       setMenuBtnClass('menu-btn close')
       setMenuItemsClass('show')

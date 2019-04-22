@@ -1,15 +1,18 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import PageTitle from "../components/PageTitle"
+import SubTitle from "../components/SubTitle"
+
+const titleProps = ['About', 'Me'];
+const subProps = 'Let me tell you a few things...';
 
 const AboutPage = () => (
   <Layout>
     <SEO title="About Me" />
     <main id="about">
-      <h1 className="lg-heading">
-        About <span className="text-secondary">Me</span>
-      </h1>
-      <h2 className="sm-heading">Let me tell you a few things...</h2>
+      <PageTitle titleProps={titleProps} />
+      <SubTitle subProps={subProps} />
       <div className="about-info">
         <div alt="personal photo" className="bio-image portriat" />
         <div className="bio">

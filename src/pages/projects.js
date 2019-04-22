@@ -2,16 +2,19 @@ import React from "react"
 import Layout from "../components/layout"
 import { FaGithub, FaEye } from "react-icons/fa"
 import SEO from "../components/seo"
+import PageTitle from "../components/PageTitle"
+import SubTitle from "../components/SubTitle"
 import logo from "../images/ms-icon-310x310.png"
+
+const titleProps = ['My', 'Work'];
+const subProps = 'Check out some of my projects...';
 
 const ProjectsPage = () => (
   <Layout>
     <SEO title="My Projects" />
     <main id="projects">
-      <h1 className="lg-heading">
-        My <span className="text-secondary">Work</span>
-        <h2 className="sm-heading">Check out some of my projects...</h2>
-      </h1>
+      <PageTitle titleProps={titleProps}/>
+      <SubTitle subProps={subProps} />
       <div className="projects">
         <div className="item">
           <a href="#!">

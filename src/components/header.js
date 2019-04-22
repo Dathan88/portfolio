@@ -2,7 +2,6 @@ import PropTypes from "prop-types"
 import React, {useState} from "react"
 import Menu from "./Menu"
 
-
 const Header = ({ siteTitle }) => {
   const [menuBtnClass, setMenuBtnClass] = useState('menu-btn show')
   const [menuItemsClass, setMenuItemsClass ] = useState('close')

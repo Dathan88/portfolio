@@ -2,8 +2,13 @@ import React from "react"
 import { Link } from "gatsby"
 import { IconContext } from "react-icons"
 import { FaGithub, FaLinkedin } from "react-icons/fa"
+import PageTitle from "../components/PageTitle"
+import SubTitle from "../components/SubTitle"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+
+const titleProps = ['Dathan', 'Spencer'];
+const subProps = 'Web Developer & UX/UI Designer';
 
 const HomePage = () => (
   <Layout>
@@ -12,10 +17,8 @@ const HomePage = () => (
       keywords={[`gatsby`, `application`, `react`, `personal`, `portfolio`]}
     />
     <main id="home">
-      <h1 className="lg-heading">
-        Dathan <span className="text-secondary">Spencer</span>
-      </h1>
-      <h2 className="sm-heading">Web Developer & UX/UI Designer</h2>
+      <PageTitle titleProps={titleProps} />
+      <SubTitle subProps={subProps} />
       <IconContext.Provider value={{ size: "2rem" }}>
         <div className="icons">
           <Link to="#!">

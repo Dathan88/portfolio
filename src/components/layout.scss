@@ -774,6 +774,7 @@ main {
 		}
 	}
 	&#projects {
+		padding: 1rem 3rem 5rem;
 		overflow: hidden;
 
 		.sm-heading {
@@ -1102,7 +1103,7 @@ footer {
 		}
 
 		body & {
-			height: 100vh;
+			height: 100%;
 			background-color: $primary-color;
 		}
 	}
@@ -1267,13 +1268,15 @@ footer {
 
 
 	main#projects-parent {
-		padding: 2rem;
-
 		#projects {
-			padding: 4rem;
+			padding: 6rem;
 	
 			.projects {
 				grid-template-columns: 1fr;
+
+				img {
+					margin-bottom: 0;
+				}
 			}
 	
 			.lg-heading {

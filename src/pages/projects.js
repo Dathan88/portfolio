@@ -4,7 +4,7 @@ import SEO from "../components/seo"
 import PageTitle from "../components/PageTitle"
 import SubTitle from "../components/SubTitle"
 import Project from "../components/Project"
-import logo from "../images/dammitdathan_electricblue.svg"
+import logo from "../images/metallicLogo_negative.svg"
 
 const titleProps = ["My", "Work"]
 const subProps = "Check out some of my projects..."

@@ -988,22 +988,32 @@ main {
 		grid-gap: 1rem;
 		grid-template-columns: repeat(3, 1fr);
 
-		img {
-			width: 100%;
-			height: auto;
+		.gatsby-image-wrapper {
+			width: 100% !important;
+			height: auto !important;
 			// border: 3px black solid;
-			
+
 			&:hover {
-				opacity: 0.5;
-				outline: 3px $secondary-color solid;
+				opacity: 0.5 !important;
+				outline: 3px $secondary-color solid !important;
 				// border: 3px $secondary-color solid;
-				@include easeOut;
+				transition: all 0.5s ease-out !important;
 			}
 		}
+
+		img {
+			transition: none !important;
+		}
+	}
+
+	body & {
+		$show-home-image: false;
+		@extend body;
+		background: $primary-color;
 	}
 }
 
-//! Work Contact page
+//! Contact page
 .boxes {
 	display: flex;
 	flex-wrap: wrap;
@@ -1052,6 +1062,7 @@ main {
 	@extend .btn;
 	background: lighten($primary-color, 50);
 	color: #333;
+	margin-top: 0.5rem;
 }
 
 footer {
@@ -1101,11 +1112,6 @@ footer {
 		.lg-heading {
 			text-align: left;
 		}
-
-		body & {
-			height: 100%;
-			background-color: $primary-color;
-		}
 	}
 }
 
@@ -1118,10 +1124,6 @@ footer {
 
 		.lg-heading {
 			text-align: left;
-		}
-
-		body & {
-			background-color: $primary-color;
 		}
 	}
 }
@@ -1259,18 +1261,17 @@ footer {
 				"job1"
 				"job2"
 				"job3";
-	
+
 			grid-template-columns: 1fr;
 			margin-bottom: 3rem;
 			text-align: center;
 		}
 	}
 
-
 	main#projects-parent {
 		#projects {
 			padding: 6rem;
-	
+
 			.projects {
 				grid-template-columns: 1fr;
 
@@ -1278,7 +1279,7 @@ footer {
 					margin-bottom: 0;
 				}
 			}
-	
+
 			.lg-heading {
 				font-size: 4.5rem;
 				text-align: center;

@@ -1,32 +1,30 @@
 import React from "react"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import PageTitle from "../components/PageTitle"
 import SubTitle from "../components/SubTitle"
 import Project from "../components/Project"
-import logo from "../images/metallicLogo_negative.svg"
 
 const titleProps = ["My", "Work"]
 const subProps = "Check out some of my projects..."
 const projectProps = [
   {
-    link: "#!",
+    href: "https://dathan88.github.io/battleship/",
     imgId: "item1",
-    src: logo,
     alt: "logo",
     eyeLink: "#!",
     eyeClass: "btn-light",
-    eyeIconClass: 'fas fa-eye',
+    eyeIconClass: "fas fa-eye",
     eyeTitle: "Project",
     hubLink: "#!",
     hubClass: "btn-dark",
-    hubIconClass: 'fas fa-github',
+    hubIconClass: "fas fa-github",
     hubTitle: "Github",
   },
   {
-    link: "#!",
+    href: "#!",
     imgId: "item2",
-    src: logo,
     alt: "logo",
     eyeLink: "#!",
     eyeClass: "btn-light",
@@ -36,9 +34,8 @@ const projectProps = [
     hubTitle: "Github",
   },
   {
-    link: "#!",
+    href: "#!",
     imgId: "item3",
-    src: logo,
     alt: "logo",
     eyeLink: "#!",
     eyeClass: "btn-light",
@@ -48,9 +45,8 @@ const projectProps = [
     hubTitle: "Github",
   },
   {
-    link: "#!",
+    href: "#!",
     imgId: "item4",
-    src: logo,
     alt: "logo",
     eyeLink: "#!",
     eyeClass: "btn-light",
@@ -61,15 +57,47 @@ const projectProps = [
   },
 ]
 
-const ProjectsPage = () => (
+const ProjectsPage = ({ data }) => (
   <Layout>
     <SEO title="My Projects" />
     <main id="projects">
       <PageTitle titleProps={titleProps} />
       <SubTitle subProps={subProps} />
-      <Project projectProps={projectProps} />
+      <Project projectProps={projectProps} data={data} />
     </main>
   </Layout>
 )
 
 export default ProjectsPage
+export const pageQuery = graphql`
+  query {
+    battleship: file(relativePath: { eq: "battleship.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    placeholder1: file(relativePath: { eq: "defaultLogo.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    placeholder2: file(relativePath: { eq: "defaultLogo.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    placeholder3: file(relativePath: { eq: "defaultLogo.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`

@@ -2,14 +2,15 @@ import React, { useState } from "react"
 import { Link } from "gatsby"
 
 const MenuList = props => {
-  //eslink-disable-next-line
+  // eslint-disable-next-line
   const [myPages, addPages] = useState([
     "Home",
     "About Me",
     "My Work",
     "Contact Info",
   ])
-  //eslink-disable-next-line
+
+  // eslint-disable-next-line
   const [myLinks, addLinks] = useState(["/", "about/", "projects/", "contact/"])
 
   return (

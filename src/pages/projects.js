@@ -23,7 +23,7 @@ const projectProps = [
     hubTitle: "Github",
   },
   {
-    href: "#!",
+    href: "https://dathan88.github.io/Etch-a-Sketch",
     imgId: "item2",
     alt: "logo",
     eyeLink: "#!",
@@ -34,7 +34,7 @@ const projectProps = [
     hubTitle: "Github",
   },
   {
-    href: "#!",
+    href: "https://dathan88.github.io/Calculator",
     imgId: "item3",
     alt: "logo",
     eyeLink: "#!",
@@ -45,7 +45,7 @@ const projectProps = [
     hubTitle: "Github",
   },
   {
-    href: "#!",
+    href: "https://dathan88.github.io/Library",
     imgId: "item4",
     alt: "logo",
     eyeLink: "#!",
@@ -73,31 +73,34 @@ export const pageQuery = graphql`
   query {
     battleship: file(relativePath: { eq: "battleship.png" }) {
       childImageSharp {
-        fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid_withWebp
+        fluid(maxWidth: 400, maxHeight: 400) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
-    placeholder1: file(relativePath: { eq: "defaultLogo.jpg" }) {
+    placeholder1: file(relativePath: { eq: "etch-sketch.png" }) {
       childImageSharp {
-        fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid_withWebp
+        fluid(maxWidth: 400, maxHeight: 400) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
-    placeholder2: file(relativePath: { eq: "defaultLogo.jpg" }) {
+    placeholder2: file(relativePath: { eq: "calc.png" }) {
       childImageSharp {
-        fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid_withWebp
+        fluid(maxWidth: 400, maxHeight: 400) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
-    placeholder3: file(relativePath: { eq: "defaultLogo.jpg" }) {
+    placeholder3: file(relativePath: { eq: "books.png" }) {
       childImageSharp {
-        fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid_withWebp
+        fluid(maxWidth: 400, maxHeight: 400) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
   }
 `
+
+// Etch-a-Sketch gif
+// https://media.giphy.com/media/37QN7rVCX8rySQ3RUR/giphy.gif

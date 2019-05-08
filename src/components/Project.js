@@ -14,10 +14,10 @@ const Project = props => (
               fluid={props.data[myData[i]].childImageSharp.fluid}
             />
           </a>
-          <a to={project.eyeLink} className={project.eyeClass}>
+          <a href={project.eyeLink} className={project.eyeClass}>
             <FaEye className={project.eyeIconClass} /> {project.eyeTitle}
           </a>
-          <a to={project.hubLink} className={project.hubClass}>
+          <a href={project.hubLink} className={project.hubClass}>
             <FaGithub className={project.hubIconClass} /> {project.hubTitle}
           </a>
         </div>

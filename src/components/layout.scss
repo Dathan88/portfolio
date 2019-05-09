@@ -991,12 +991,10 @@ main {
 		.gatsby-image-wrapper {
 			width: 100% !important;
 			height: auto !important;
-			// border: 3px black solid;
 
 			&:hover {
-				opacity: 0.5 !important;
+				// opacity: 0.5 !important;
 				outline: 3px $secondary-color solid !important;
-				// border: 3px $secondary-color solid;
 				transition: all 0.5s ease-out !important;
 			}
 		}

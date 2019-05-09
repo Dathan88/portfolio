@@ -1,5 +1,6 @@
 import React from "react"
 import Img from "gatsby-image"
+import Tappable from "react-tappable"
 import { FaGithub, FaEye } from "react-icons/fa"
 
 const Project = props => (
@@ -8,12 +9,27 @@ const Project = props => (
       const myData = Object.keys(props.data)
       return (
         <div className="item" key={i}>
-          <a href={project.href} id={project.imgId}>
+          <div
+            href={project.href}
+            id={project.imgId}
+            onMouseOver={e =>
+              (e.currentTarget.children[0].children[2].childNodes[0].srcset =
+                project.gif)
+            }
+            onMouseOut={e =>
+              (e.currentTarget.children[0].children[2].childNodes[0].srcset = (
+                <Img
+                  alt={project.alt}
+                  fluid={props.data[myData[i]].childImageSharp.fluid}
+                />
+              ))
+            }
+          >
             <Img
               alt={project.alt}
               fluid={props.data[myData[i]].childImageSharp.fluid}
             />
-          </a>
+          </div>
           <a href={project.eyeLink} className={project.eyeClass}>
             <FaEye className={project.eyeIconClass} /> {project.eyeTitle}
           </a>
@@ -27,3 +43,11 @@ const Project = props => (
 )
 
 export default Project
+
+/* 
+ onTouchStart={
+              <Tappable onPress={this.handleTapEvent}>
+                I respond to Tap events
+              </Tappable>
+            }
+ */

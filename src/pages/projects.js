@@ -79,42 +79,33 @@ const ProjectsPage = ({ data }) => (
 export default ProjectsPage
 export const pageQuery = graphql`
   query {
-    battleship: file(relativePath: { eq: "battleship.png" }) {
+    battleship: file(relativePath: { eq: "battleship1.png" }) {
       childImageSharp {
-        fluid(maxWidth: 450, maxHeight: 450) {
+        fluid(maxWidth: 1600, maxHeight: 900) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    etchASketch: file(relativePath: { eq: "etch-sketch.png" }) {
+    etchASketch: file(relativePath: { eq: "etch1.png" }) {
       childImageSharp {
-        fluid(maxWidth: 450, maxHeight: 450) {
+        fluid(maxWidth: 1600, maxHeight: 900) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    calculator: file(relativePath: { eq: "calc.png" }) {
+    calculator: file(relativePath: { eq: "calc1.png" }) {
       childImageSharp {
-        fluid(maxWidth: 450, maxHeight: 450) {
+        fluid(maxWidth: 1600, maxHeight: 900) {
           ...GatsbyImageSharpFluid
         }
       }
     }
-    bookList: file(relativePath: { eq: "books.png" }) {
+    bookList: file(relativePath: { eq: "books1.png" }) {
       childImageSharp {
-        fluid(maxWidth: 450, maxHeight: 450) {
+        fluid(maxWidth: 1600, maxHeight: 900) {
           ...GatsbyImageSharpFluid
         }
       }
     }
   }
 `
-
-// Etch-a-Sketch gif
-// https://media.giphy.com/media/37QN7rVCX8rySQ3RUR/giphy.gif
-
-// Etch embedded iframe
-// <div style="width:100%;height:0;padding-bottom:56%;position:relative;"><iframe src="https://giphy.com/embed/37QN7rVCX8rySQ3RUR" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/etch-a-sketch-37QN7rVCX8rySQ3RUR">via GIPHY</a></p>
-
-// tictactoe gif
-// https://gph.is/g/EJVOxeE

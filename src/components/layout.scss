@@ -814,7 +814,7 @@ main {
 	@include easeOut();
 
 	.btn-line {
-		width: 28px;
+		width: 2.8rem;
 		height: 3px;
 		margin: 0 0 5px 0;
 		background: set-text-color($primary-color);
@@ -1196,6 +1196,19 @@ footer {
 }
 // Smartphones
 @include mediaSm {
+	.menu-btn {
+		right: 27px;
+		top: 27px;
+
+		.btn-line {
+			width: 2.5rem;
+			height: 3px;
+			margin: 0 0 5px 0;
+			background: set-text-color($primary-color);
+			@include easeOut;
+		}
+	}
+
 	ul.menu-nav,
 	div.menu-branding {
 		float: none;

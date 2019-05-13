@@ -1,7 +1,7 @@
 import React from "react"
 import Img from "gatsby-image"
-import Tappable from "react-tappable"
 import { FaGithub, FaEye } from "react-icons/fa"
+// import Tappable from "react-tappable"
 
 const Project = props => (
   <div className="projects">
@@ -17,12 +17,8 @@ const Project = props => (
                 project.gif)
             }
             onMouseOut={e =>
-              (e.currentTarget.children[0].children[2].childNodes[0].srcset = (
-                <Img
-                  alt={project.alt}
-                  fluid={props.data[myData[i]].childImageSharp.fluid}
-                />
-              ))
+              (e.currentTarget.children[0].children[2].childNodes[0].srcset =
+                props.data[myData[i]].childImageSharp.fluid.src)
             }
           >
             <Img

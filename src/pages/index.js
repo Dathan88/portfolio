@@ -7,8 +7,8 @@ import SubTitle from "../components/SubTitle"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const titleProps = ['Dathan', 'Spencer'];
-const subProps = 'Web Developer & UX/UI Designer';
+const titleProps = ["Dathan", "Spencer"]
+const subProps = "Web Developer & UX/UI Designer"
 
 const HomePage = () => (
   <Layout>

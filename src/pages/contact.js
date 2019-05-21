@@ -12,14 +12,14 @@ const contactProps = [
     type: "Email: ",
     info: "johnny5@example.com",
   },
-  {
-    type: "Phone: ",
-    info: "(555) 555-5555",
-  },
-  {
-    type: "Address: ",
-    info: "50 Center St, Boston NM 87101",
-  },
+  // {
+  //   type: "Phone: ",
+  //   info: "(555) 555-5555",
+  // },
+  // {
+  //   type: "Address: ",
+  //   info: "50 Center St, Boston NM 87101",
+  // },
 ]
 
 const ContactPage = () => (

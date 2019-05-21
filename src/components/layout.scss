@@ -805,6 +805,7 @@ main {
 	}
 }
 
+//! Hamburger button
 .menu-btn {
 	position: absolute;
 	z-index: 3;
@@ -881,7 +882,7 @@ main {
 		}
 	}
 
-	//! Branding Side
+	//! Menu Branding Side
 	&-branding {
 		background: $primary-color;
 		transform: translate3d(0, 100%, 0);
@@ -937,6 +938,7 @@ main {
 	}
 }
 
+//! About page
 .about-info {
 	display: grid;
 	text-align: left;
@@ -952,7 +954,7 @@ main {
 		grid-area: bioimage;
 		width: 250px;
 		height: 250px;
-		background: url("../images/dathan1-250px.jpg");
+		background: url("../images/dathan3-min-250.jpg");
 		border-radius: 50%;
 		border: solid 3px $secondary-color;
 	}

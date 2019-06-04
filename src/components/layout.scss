@@ -983,6 +983,15 @@ main {
 	}
 }
 
+.aboutMe-link {
+	color: yellow;
+}
+
+.aboutMe-link:hover {
+	color: $secondary-color;
+	transition: all 0.5s ease-out !important;
+}
+
 //! Work/Projects
 #projects {
 	.projects {

@@ -8,12 +8,13 @@ import Bio from "../components/Bio"
 
 const titleProps = ["About", "Me"]
 const subProps = "Let me tell you a few things..."
-const jobProps = [
+const skillProps = [
   {
     class: "job job-1",
-    company: "Core Skills",
+    info: "Core Skills",
     // job: "Front-End Developer",
-    summary: `JavaScript, 
+    summary: `
+    JavaScript, 
     CSS3, 
     HTML5, 
     Responsive 
@@ -25,9 +26,10 @@ const jobProps = [
   },
   {
     class: "job job-2",
-    company: "Libraries",
+    info: "Libraries",
     // job: "Graphic Designer",
-    summary: `React,
+    summary: `
+    React,
     Gatsby,
     Express,
     jQuery,
@@ -37,16 +39,17 @@ const jobProps = [
   },
   {
     class: "job job-3",
-    company: "Interests",
+    info: "Interests",
     // job: "Front-End Developer",
-    summary: `Computers/Programming/Tech,
-    Design/Art,
+    summary: `
+    Family,
+    Computers && Programming,
+    Design,
     Movies,
     Music/Drums,
     Video Games,
     Auto Mechanics,
     History,
-    Family,
     DIY Projects,`,
   },
 ]
@@ -70,9 +73,9 @@ const AboutPage = () => (
       <div className="about-info">
         <div alt="personal photo" className="bio-image portriat" />
         <Bio bioProps={bioProps} />
-        <Jobs jobProps={jobProps[0]} />
-        <Jobs jobProps={jobProps[1]} />
-        <Jobs jobProps={jobProps[2]} />
+        <Jobs skillProps={skillProps[0]} />
+        <Jobs skillProps={skillProps[1]} />
+        <Jobs skillProps={skillProps[2]} />
       </div>
     </main>
   </Layout>

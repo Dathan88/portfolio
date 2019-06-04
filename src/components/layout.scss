@@ -992,6 +992,16 @@ main {
 	transition: all 0.5s ease-out !important;
 }
 
+.skillTitle {
+	text-align: center;
+	text-decoration: underline;
+	margin-bottom: 1rem;
+}
+
+.skillContent {
+	text-align: center;
+}
+
 //! Work/Projects
 #projects {
 	.projects {

@@ -21,12 +21,12 @@ const HomePage = () => (
       <SubTitle subProps={subProps} />
       <IconContext.Provider value={{ size: "2rem" }}>
         <div className="icons">
-          <Link to="#!">
+          <a href={"https://github.com/Dathan88"}>
             <FaGithub />
-          </Link>
-          <Link to="#!">
+          </a>
+          {/* <a href="#!">
             <FaLinkedin />
-          </Link>
+          </a> */}
         </div>
       </IconContext.Provider>
     </main>

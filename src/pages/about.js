@@ -11,35 +11,54 @@ const subProps = "Let me tell you a few things..."
 const jobProps = [
   {
     class: "job job-1",
-    company: "Jakubowski Inc.",
-    job: "Front-End Developer",
-    summary: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi fugit corporis, ipsam magni error laboriosam. Odit praesentium numquam quas ipsam nostrum quaerat quae itaque, aliquid labore voluptatibus! Atque, tenetur quod!`,
+    company: "Core Skills",
+    // job: "Front-End Developer",
+    summary: `JavaScript, 
+    CSS3, 
+    HTML5, 
+    Responsive 
+    Web Design, 
+    Websockets, 
+    Node.js, 
+    MySQL,
+    WordPress`,
   },
   {
     class: "job job-2",
-    company: "Blick Group",
-    job: "Graphic Designer",
-    summary: `Occaecat laboris occaecat eu ullamco officia consectetur aliqua
-      Lorem ipsum ut anim. Laborum qui eiusmod elit quis aute. Ex eu
-      adipisicing ipsum mollit voluptate minim ut officia voluptate aute
-      consectetur.`,
+    company: "Libraries",
+    // job: "Graphic Designer",
+    summary: `React,
+    Gatsby,
+    Express,
+    jQuery,
+    Bootstrap,
+    Sass,
+    Pug/Jade`,
   },
   {
     class: "job job-3",
-    company: "Zemlak - Stanton",
-    job: "Front-End Developer",
-    summary: `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque
-    quisquam enim labore quam unde tenetur eum, ratione magni, nobis qui
-    iste?`,
+    company: "Interests",
+    // job: "Front-End Developer",
+    summary: `Computers/Programming/Tech,
+    Design/Art,
+    Movies,
+    Music/Drums,
+    Video Games,
+    Auto Mechanics,
+    History,
+    Family,
+    DIY Projects,`,
   },
 ]
 const bioProps = {
   class: "bio",
   title: "BIO",
-  summary: `Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Perferendis, error! Atque fugit non beatae vero, repudiandae hic
-            sunt odit dolore sed eos similique nobis maxime tenetur! Esse itaque
-            unde animi.`,
+  summary:
+    "I am a Front-End Developer and designer from Albuquerque, New Mexico, currently residing in the greater SLC, Utah area. I have 2+ years experience creating websites, games, and responsive/progressive web apps. I’ve worked in customer service most of my life and, while I enjoy working with and helping people, the industry did not challenge me or satisfy my desire to learn and grow.",
+  summary2:
+    " in 2016, and quickly found that I loved the entire process of creating a web page or web app. Especially fixing bugs, figuring out why they happened and how to prevent them.",
+  summary3:
+    "I love solving problems and creating things that people will enjoy or find useful. I am always looking for work and new projects to challenge and help me grow, so feel free to ",
 }
 
 const AboutPage = () => (

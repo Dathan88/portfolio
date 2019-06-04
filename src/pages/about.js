@@ -49,8 +49,7 @@ const skillProps = [
     Music/Drums,
     Video Games,
     Auto Mechanics,
-    History,
-    DIY Projects,`,
+    History`,
   },
 ]
 const bioProps = {

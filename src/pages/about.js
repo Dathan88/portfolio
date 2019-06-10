@@ -14,14 +14,13 @@ const skillProps = [
     info: "Core Skills",
     // job: "Front-End Developer",
     summary: `
-    JavaScript, 
+    JavaScript (ES6+), 
     CSS3, 
     HTML5, 
     Responsive 
     Web Design, 
     Websockets, 
-    Node.js, 
-    MySQL,
+    Node.js,
     WordPress`,
   },
   {

@@ -837,7 +837,7 @@ main {
 			}
 			// Line 3 - Rotate
 			&:nth-child(3) {
-				outline: 1px dashed black;
+				// outline: 1px dashed black;
 				transform: rotate(-45deg) translate(7px, -6px);
 			}
 		}
@@ -849,7 +849,7 @@ main {
 	position: fixed;
 	top: 0;
 	width: 100%;
-	opacity: 0.9;
+	opacity: 0.96;
 	visibility: hidden;
 
 	&.show {
@@ -946,11 +946,13 @@ main {
 	grid-gap: 30px;
 	grid-template-areas:
 		"bioimage bio bio"
+		"bioimage bio bio"
 		"job1 job2 job3";
 	grid-template-columns: repeat(3, 1fr);
 
 	.bio-image.portriat {
 		justify-self: center;
+		align-self: center;
 		grid-area: bioimage;
 		width: 250px;
 		height: 250px;

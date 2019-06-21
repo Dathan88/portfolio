@@ -35,7 +35,7 @@ const projectProps = [
     hubLink: "https://github.com/Dathan88/Etch-a-Sketch",
     hubClass: "btn-dark",
     hubTitle: "Github",
-    gif: "https://media.giphy.com/media/37QN7rVCX8rySQ3RUR/giphy.gif",
+    gif: "https://media.giphy.com/media/W2RN3fpyo5qPMziSoC/giphy.gif",
   },
   {
     number: 2,
@@ -86,7 +86,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    etchASketch: file(relativePath: { eq: "etch1.png" }) {
+    etchASketch: file(relativePath: { eq: "Etch.png" }) {
       childImageSharp {
         fluid(maxWidth: 1600, maxHeight: 900) {
           ...GatsbyImageSharpFluid

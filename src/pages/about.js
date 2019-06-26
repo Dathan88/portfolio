@@ -63,7 +63,7 @@ const bioProps = {
 }
 
 const AboutPage = () => {
-  let n = localStorage.getItem("on_load_counter")
+  /* let n = localStorage.getItem("on_load_counter")
 
   if (n === null) {
     n = 0
@@ -72,7 +72,7 @@ const AboutPage = () => {
   n++
 
   localStorage.setItem("on_load_counter", n)
-
+ */
   // document.getElementById("counter").innerHTML = n
 
   return (

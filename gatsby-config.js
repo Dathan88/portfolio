@@ -9,20 +9,20 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-catch-links`,
     `gatsby-transformer-remark`,
-      {
-        resolve: `gatsby-source-filesystem`,
-        options: {
-          name: `images`,
-          path: `${__dirname}/src/images`,
-        },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
       },
-      {
-        resolve: `gatsby-source-filesystem`,
-        options: {
-          name: `pages`,
-          path: `${__dirname}/src/pages`,
-        },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages`,
       },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -35,6 +35,12 @@ module.exports = {
         theme_color: `#000`,
         display: `standalone`,
         icon: `src/images/metallicLogo_negative.svg`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-142845242-1",
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

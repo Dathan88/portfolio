@@ -62,21 +62,35 @@ const bioProps = {
     "I love solving problems and creating things that people will enjoy or find useful. I am always looking for work and new projects to challenge and help me grow, so feel free to ",
 }
 
-const AboutPage = () => (
-  <Layout>
-    <SEO title="About Me" />
-    <main id="about">
-      <PageTitle titleProps={titleProps} />
-      <SubTitle subProps={subProps} />
-      <div className="about-info">
-        <div alt="personal photo" className="bio-image portriat" />
-        <Bio bioProps={bioProps} />
-        <Jobs skillProps={skillProps[0]} />
-        <Jobs skillProps={skillProps[1]} />
-        <Jobs skillProps={skillProps[2]} />
-      </div>
-    </main>
-  </Layout>
-)
+const AboutPage = () => {
+  let n = localStorage.getItem("on_load_counter")
+
+  if (n === null) {
+    n = 0
+  }
+
+  n++
+
+  localStorage.setItem("on_load_counter", n)
+
+  // document.getElementById("counter").innerHTML = n
+
+  return (
+    <Layout>
+      <SEO title="About Me" />
+      <main id="about">
+        <PageTitle titleProps={titleProps} />
+        <SubTitle subProps={subProps} />
+        <div className="about-info">
+          <div alt="personal photo" className="bio-image portriat" />
+          <Bio bioProps={bioProps} />
+          <Jobs skillProps={skillProps[0]} />
+          <Jobs skillProps={skillProps[1]} />
+          <Jobs skillProps={skillProps[2]} />
+        </div>
+      </main>
+    </Layout>
+  )
+}
 
 export default AboutPage

@@ -93,7 +93,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    calculator: file(relativePath: { eq: "calc2.png" }) {
+    calculator: file(relativePath: { eq: "calc2Pic.png" }) {
       childImageSharp {
         fluid(maxWidth: 1600, maxHeight: 900) {
           ...GatsbyImageSharpFluid

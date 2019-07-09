@@ -48,7 +48,7 @@ const projectProps = [
     hubLink: "https://github.com/Dathan88/Calculator",
     hubClass: "btn-dark",
     hubTitle: "Github",
-    gif: "https://media.giphy.com/media/wsUDJZ6ZVcSdo5AI7f/giphy.gif",
+    gif: "https://media.giphy.com/media/U3gTBwYZMd10HRjGG6/giphy.gif",
   },
   {
     number: 3,
@@ -93,7 +93,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    calculator: file(relativePath: { eq: "calc1.png" }) {
+    calculator: file(relativePath: { eq: "calc2.png" }) {
       childImageSharp {
         fluid(maxWidth: 1600, maxHeight: 900) {
           ...GatsbyImageSharpFluid

@@ -39,11 +39,3 @@ const Project = props => (
 )
 
 export default Project
-
-/* 
- onTouchStart={
-              <Tappable onPress={this.handleTapEvent}>
-                I respond to Tap events
-              </Tappable>
-            }
- */

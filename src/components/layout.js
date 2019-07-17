@@ -18,10 +18,18 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <div id='layout'>
+        <div id="layout">
           <main id={children[1].props.id + `-parent`}>
             {children}
-            <footer>Copyright &copy; 2019</footer>
+            <footer>
+              Copyright &copy; 2019{" "}
+              <a
+                className="btn-dark"
+                href="https://github.com/Dathan88/portfolio"
+              >
+                Site Code
+              </a>
+            </footer>
           </main>
         </div>
       </>

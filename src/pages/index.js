@@ -24,9 +24,6 @@ const HomePage = () => (
           <a href={"https://github.com/Dathan88"}>
             <FaGithub />
           </a>
-          {/* <a href="#!">
-            <FaLinkedin />
-          </a> */}
         </div>
       </IconContext.Provider>
     </main>

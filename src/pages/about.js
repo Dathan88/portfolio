@@ -55,7 +55,7 @@ const bioProps = {
   class: "bio",
   title: "BIO",
   summary:
-    "I am a Front-End Developer and designer from Albuquerque, New Mexico, currently residing in the greater SLC, Utah area. I have 2+ years experience creating websites, games, and responsive/progressive web apps. I’ve worked in customer service most of my life and, while I enjoy working with and helping people, the industry did not challenge me or satisfy my desire to learn and grow.",
+    "I am a Front-End Developer and designer from Albuquerque, New Mexico, currently residing in the greater SLC, Utah area. I have ~3 years experience creating websites, games, and responsive/progressive web apps. I’ve worked in customer service most of my life and, while I enjoy working with and helping people, the industry did not challenge me or satisfy my desire to learn and grow.",
   summary2:
     " in 2016, and quickly found that I loved the entire process of creating a web page or web app. Especially fixing bugs, figuring out why they happened and how to prevent them.",
   summary3:
@@ -63,18 +63,6 @@ const bioProps = {
 }
 
 const AboutPage = () => {
-  /* let n = localStorage.getItem("on_load_counter")
-
-  if (n === null) {
-    n = 0
-  }
-
-  n++
-
-  localStorage.setItem("on_load_counter", n)
- */
-  // document.getElementById("counter").innerHTML = n
-
   return (
     <Layout>
       <SEO title="About Me" />

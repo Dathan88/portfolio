@@ -1,7 +1,6 @@
 import React from "react"
 import Img from "gatsby-image"
 import { FaGithub, FaEye } from "react-icons/fa"
-// import Tappable from "react-tappable"
 
 const Project = props => (
   <div className="projects">

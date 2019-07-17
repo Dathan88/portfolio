@@ -10,7 +10,8 @@ const titleProps = ["My", "Work"]
 const subProps = "Check out some of my projects..."
 const projectProps = [
   {
-    number: 0,
+    number: 1,
+    name: "battleship",
     href: "#!",
     imgId: "item1",
     alt: "logo",
@@ -25,7 +26,8 @@ const projectProps = [
     gif: "https://media.giphy.com/media/1wogBSJ7N0EOrPl16n/giphy.gif",
   },
   {
-    number: 1,
+    number: 2,
+    name: "etchASketch",
     href: "#!",
     imgId: "item2",
     alt: "logo",
@@ -38,7 +40,8 @@ const projectProps = [
     gif: "https://media.giphy.com/media/W2RN3fpyo5qPMziSoC/giphy.gif",
   },
   {
-    number: 2,
+    number: 3,
+    name: "calculator",
     href: "#!",
     imgId: "item3",
     alt: "logo",
@@ -51,7 +54,8 @@ const projectProps = [
     gif: "https://media.giphy.com/media/U3gTBwYZMd10HRjGG6/giphy.gif",
   },
   {
-    number: 3,
+    number: 4,
+    name: "library",
     href: "#!",
     imgId: "item4",
     alt: "logo",
@@ -109,3 +113,29 @@ export const pageQuery = graphql`
     }
   }
 `
+/* 
+{
+    number: 0,
+    name: "portfolio",
+    href: "#!",
+    imgId: "item0",
+    alt: "logo",
+    eyeLink: null,
+    eyeClass: null,
+    eyeIconClass: null,
+    eyeTitle: null,
+    hubLink: "https://github.com/Dathan88/portfolio",
+    hubClass: "btn-dark",
+    hubIconClass: "fas fa-github",
+    hubTitle: "Github",
+    gif: "",
+  },
+
+portfolio: file(relativePath: { eq: "sitePic.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1600, maxHeight: 900) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+*/

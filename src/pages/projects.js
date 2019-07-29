@@ -23,7 +23,7 @@ const projectProps = [
     hubClass: "btn-dark",
     hubIconClass: "fas fa-github",
     hubTitle: "Github",
-    gif: "https://media.giphy.com/media/1wogBSJ7N0EOrPl16n/giphy.gif",
+    gif: "https://media.giphy.com/media/KdqUBrwlcbs3HBRHFS/giphy.gif",
   },
   {
     number: 2,
@@ -83,7 +83,7 @@ const ProjectsPage = ({ data }) => (
 export default ProjectsPage
 export const pageQuery = graphql`
   query {
-    battleship: file(relativePath: { eq: "battleship1.png" }) {
+    battleship: file(relativePath: { eq: "battleship2.png" }) {
       childImageSharp {
         fluid(maxWidth: 1600, maxHeight: 900) {
           ...GatsbyImageSharpFluid

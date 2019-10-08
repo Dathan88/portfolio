@@ -55,17 +55,17 @@ const projectProps = [
   },
   {
     number: 4,
-    name: "library",
+    name: "movieList",
     href: "#!",
     imgId: "item4",
     alt: "logo",
-    eyeLink: "https://dathan88.github.io/Library",
+    eyeLink: "https://movie-list-app-1.herokuapp.com/",
     eyeClass: "btn-light",
     eyeTitle: "Project",
-    hubLink: "https://github.com/Dathan88/Library",
+    hubLink: "https://github.com/Dathan88/MovieListApp",
     hubClass: "btn-dark",
     hubTitle: "Github",
-    gif: "https://media.giphy.com/media/9rfYsFnLaeSRUem4W5/giphy.gif",
+    gif: "https://media.giphy.com/media/eidv63dxClXjnv0GhJ/giphy.gif",
   },
 ]
 
@@ -104,7 +104,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    bookList: file(relativePath: { eq: "books1.png" }) {
+    movieList: file(relativePath: { eq: "MovieList.png" }) {
       childImageSharp {
         fluid(maxWidth: 1600, maxHeight: 900) {
           ...GatsbyImageSharpFluid
@@ -113,29 +113,3 @@ export const pageQuery = graphql`
     }
   }
 `
-/* 
-{
-    number: 0,
-    name: "portfolio",
-    href: "#!",
-    imgId: "item0",
-    alt: "logo",
-    eyeLink: null,
-    eyeClass: null,
-    eyeIconClass: null,
-    eyeTitle: null,
-    hubLink: "https://github.com/Dathan88/portfolio",
-    hubClass: "btn-dark",
-    hubIconClass: "fas fa-github",
-    hubTitle: "Github",
-    gif: "",
-  },
-
-portfolio: file(relativePath: { eq: "sitePic.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 1600, maxHeight: 900) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-*/

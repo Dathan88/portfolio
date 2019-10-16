@@ -1,6 +1,6 @@
 import React from "react"
 import Img from "gatsby-image"
-import { FaGithub, FaEye } from "react-icons/fa"
+import { FaGithub, FaGamepad } from "react-icons/fa"
 
 const Project = props => (
   <div className="projects">
@@ -26,7 +26,7 @@ const Project = props => (
             />
           </div>
           <a href={project.eyeLink} className={project.eyeClass}>
-            <FaEye className={project.eyeIconClass} /> {project.eyeTitle}
+            <FaGamepad className={project.eyeIconClass} /> {project.eyeTitle}
           </a>
           <a href={project.hubLink} className={project.hubClass}>
             <FaGithub className={project.hubIconClass} /> {project.hubTitle}

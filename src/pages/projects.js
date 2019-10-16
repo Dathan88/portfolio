@@ -18,7 +18,7 @@ const projectProps = [
     eyeLink: "https://dathan88.github.io/battleship",
     eyeClass: "btn-light",
     eyeIconClass: "fas fa-eye",
-    eyeTitle: "Project",
+    eyeTitle: "Try Me",
     hubLink: "https://github.com/Dathan88/battleship",
     hubClass: "btn-dark",
     hubIconClass: "fas fa-github",
@@ -33,7 +33,7 @@ const projectProps = [
     alt: "logo",
     eyeLink: "https://dathan88.github.io/Etch-a-Sketch",
     eyeClass: "btn-light",
-    eyeTitle: "Project",
+    eyeTitle: "Try Me",
     hubLink: "https://github.com/Dathan88/Etch-a-Sketch",
     hubClass: "btn-dark",
     hubTitle: "Github",
@@ -47,7 +47,7 @@ const projectProps = [
     alt: "logo",
     eyeLink: "https://dathan88.github.io/Calculator",
     eyeClass: "btn-light",
-    eyeTitle: "Project",
+    eyeTitle: "Try Me",
     hubLink: "https://github.com/Dathan88/Calculator",
     hubClass: "btn-dark",
     hubTitle: "Github",
@@ -61,11 +61,11 @@ const projectProps = [
     alt: "logo",
     eyeLink: "https://movie-list-app-1.herokuapp.com/",
     eyeClass: "btn-light",
-    eyeTitle: "Project",
+    eyeTitle: "Try Me",
     hubLink: "https://github.com/Dathan88/MovieListApp",
     hubClass: "btn-dark",
     hubTitle: "Github",
-    gif: "https://media.giphy.com/media/eidv63dxClXjnv0GhJ/giphy.gif",
+    gif: "https://media.giphy.com/media/MF7iRK3G7M0uFYKbE1/giphy.gif",
   },
 ]
 
@@ -104,7 +104,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    movieList: file(relativePath: { eq: "MovieList.png" }) {
+    movieList: file(relativePath: { eq: "Movie-List-2.png" }) {
       childImageSharp {
         fluid(maxWidth: 1600, maxHeight: 900) {
           ...GatsbyImageSharpFluid

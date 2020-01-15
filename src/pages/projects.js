@@ -11,6 +11,20 @@ const subProps = "Check out some of my projects..."
 const projectProps = [
   {
     number: 1,
+    name: "movieList",
+    href: "#!",
+    imgId: "item4",
+    alt: "logo",
+    eyeLink: "https://movie-list-app-1.herokuapp.com/",
+    eyeClass: "btn-light",
+    eyeTitle: "Try Me",
+    hubLink: "https://github.com/Dathan88/MovieListApp",
+    hubClass: "btn-dark",
+    hubTitle: "Github",
+    gif: "https://media.giphy.com/media/MF7iRK3G7M0uFYKbE1/giphy.gif",
+  },
+  {
+    number: 2,
     name: "battleship",
     href: "#!",
     imgId: "item1",
@@ -26,7 +40,7 @@ const projectProps = [
     gif: "https://media.giphy.com/media/KdqUBrwlcbs3HBRHFS/giphy.gif",
   },
   {
-    number: 2,
+    number: 3,
     name: "etchASketch",
     href: "#!",
     imgId: "item2",
@@ -40,7 +54,7 @@ const projectProps = [
     gif: "https://media.giphy.com/media/W2RN3fpyo5qPMziSoC/giphy.gif",
   },
   {
-    number: 3,
+    number: 4,
     name: "calculator",
     href: "#!",
     imgId: "item3",
@@ -52,20 +66,6 @@ const projectProps = [
     hubClass: "btn-dark",
     hubTitle: "Github",
     gif: "https://media.giphy.com/media/U3gTBwYZMd10HRjGG6/giphy.gif",
-  },
-  {
-    number: 4,
-    name: "movieList",
-    href: "#!",
-    imgId: "item4",
-    alt: "logo",
-    eyeLink: "https://movie-list-app-1.herokuapp.com/",
-    eyeClass: "btn-light",
-    eyeTitle: "Try Me",
-    hubLink: "https://github.com/Dathan88/MovieListApp",
-    hubClass: "btn-dark",
-    hubTitle: "Github",
-    gif: "https://media.giphy.com/media/MF7iRK3G7M0uFYKbE1/giphy.gif",
   },
 ]
 
@@ -83,6 +83,13 @@ const ProjectsPage = ({ data }) => (
 export default ProjectsPage
 export const pageQuery = graphql`
   query {
+    movieList: file(relativePath: { eq: "Movie-List-2.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 1600, maxHeight: 900) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
     battleship: file(relativePath: { eq: "battleship2.png" }) {
       childImageSharp {
         fluid(maxWidth: 1600, maxHeight: 900) {
@@ -98,13 +105,6 @@ export const pageQuery = graphql`
       }
     }
     calculator: file(relativePath: { eq: "calc2Pic.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 1600, maxHeight: 900) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    movieList: file(relativePath: { eq: "Movie-List-2.png" }) {
       childImageSharp {
         fluid(maxWidth: 1600, maxHeight: 900) {
           ...GatsbyImageSharpFluid
